@@ -1,8 +1,11 @@
+/*eslint-disable react/prop-types*/
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Title = () => {
-    return <h1>Hello World</h1>
+const Title = (props) => {
+    console.log(props)
+    return <h1>Hello {props.text}</h1>
 }
 
 const List = () => {
@@ -16,10 +19,11 @@ const List = () => {
 }
 
 const el = (
-    <div>
-        <Title />
+    <>
+        <Title text="Jack" />
+        <Title text="john" />
         <List />
-    </div>
+    </>
 )
 
 ReactDOM.render(el, document.getElementById('root'))
