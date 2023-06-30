@@ -1,26 +1,14 @@
 import Container from '@mui/material/Container'
 import AppBar from '@mui/material/AppBar'
-// import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import React from 'react'
-
-// import { makeStyles } from '@mui/material'
-// const usesStyles = makeStyles(() => ({
-//     menuBatton: {
-//         marginRight: 5,
-//     },
-//     title: {
-//         flexGrow: 1,
-//     },
-// }))
+import Menu from './Menu/Menu'
+import Cart from './Cart/Cart'
 
 const Header = () => {
-    // const classes = usesStyles()
-
     return (
         <AppBar position="static">
             <Container>
@@ -39,9 +27,10 @@ const Header = () => {
                         component="div"
                         sx={{ flexGrow: 1 }}
                     >
-                        xyi
+                        Fake shop
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Menu />
+                    <Cart />
                 </Toolbar>
             </Container>
         </AppBar>
